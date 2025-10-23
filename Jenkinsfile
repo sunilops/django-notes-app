@@ -21,7 +21,7 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                deploy()
+                deploy("docker run -it sunilkumar112/notes-app -p 8000:8000 -address=0.0.0.0")
             }
         }
         
